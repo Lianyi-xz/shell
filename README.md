@@ -1,2 +1,1 @@
-#shell
-# shell
+# shell-----Linux shell,我写的一些小脚本
