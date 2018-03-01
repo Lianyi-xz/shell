@@ -41,8 +41,8 @@ create table MySQL_Type(
   	type_name  varchar(10)    comment'数据库实例昵称',
 );
 MySQL_Type数据
-1   rm-uf6iiz1tt4qw905iy    PRD_RDS(生产)
-2   rm-uf66901541fyse77g    PRE_RDS_TEST1(开发)
+1   rm-1    PRD_RDS(生产)
+2   rm-2    PRE_RDS_TEST1(开发)
 
 create table MySQL_DetailedSpaceUsage(
 	id         int(10)        primary key	auto_increment,
@@ -181,16 +181,6 @@ def describe_json(api_data,rds,table):
     sql = halfsql+",".join(valuelist)+";"
     return sql
 
-
-    # sqlhalf = "INSERT INTO " + tablename + " (" + tablecolumn + ") VALUES"
-    #     apivalues = i['Values']['PerformanceValue']
-    #     valuelist = []
-    #     for i in apivalues:
-    #         tablevalue = "(" + i['Value'].replace("&", ",") + ",'" + i['Date'].replace("T", " ").replace("Z"," ") + "'," + str(tabletype)+ ")"
-    #         valuelist.append(tablevalue)
-    #     sql = sqlhalf + ",".join(valuelist) + ";"
-    #     print(sql)
-
 def insert_mysql(sqllist):
     try:
         conn = MySQLdb.connect(host="192.168.0.1",
@@ -225,7 +215,4 @@ if __name__ == "__main__":
 
 
     insert_mysql(sqllist)
-    #api_data = get_mysql()
-    #    print(api_data)
-
 
