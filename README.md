@@ -19,3 +19,4 @@ auto_ssh_shell.sh：自动在服务器上执行命令
 auto_ssh：批量ssh认证  
 sql_to_json.py：sql语句转化为json格式  
 aliyun_rds.py：调用阿里云数据库监控数据最终代码
+pycurltest.py：页面网页测速
